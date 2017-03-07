@@ -8,12 +8,12 @@ module.exports = {
     //项目的文件夹 可以直接用文件夹名称 默认会找index.js 也可以确定是哪个文件名字
     entry: {
         index: './index.js',
-        vendor: ["react", "react-dom"]
+        vendor: ["react", "react-dom", "jquery"]
     },
     //输出的文件名 合并以后的js会命名为bundle.js
     output: {
         path: BUILD_PATH,
-/*        publicPath: "/output/",*/
+        /*        publicPath: "/output/",*/
         filename: "[name].bundle.js"
     },
     module: {
@@ -22,7 +22,7 @@ module.exports = {
                 test: /\.js$/,
                 loader: 'babel-loader',
                 exclude: '/node_modules/'
-            },{
+            }, {
                 test: /\.(scss|css)$/,
                 use: ['style-loader', 'css-loader', 'sass-loader'],
                 exclude: '/node_modules/'
@@ -36,7 +36,8 @@ module.exports = {
         hot: true,
         compress: true,
         historyApiFallback: true,
-        publicPath: '/build/'
+        publicPath: '/build/',
+        port: 3000
     },
     watch: true,
     watchOptions: {
@@ -54,15 +55,14 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
             minChunks: Infinity,
-            /*            filename: 'vendor-[hash].min.js',*/
         }),
         new webpack.HotModuleReplacementPlugin()
-/*        new webpack.optimize.UglifyJsPlugin({
+  /*      new webpack.optimize.UglifyJsPlugin({
             minimize: true,
             compress: {
                 warnings: false,
                 drop_console: false,
             }
-        }),*/
+        })*/
     ]
 };

@@ -13,3 +13,9 @@ $navFontSize: 15px;
   color: $navBackground;
   transition: $littleTransition;
 }
+
+@mixin verticalAlient(){
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}

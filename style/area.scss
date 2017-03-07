@@ -1,8 +1,7 @@
+@import "variable";
 .area {
+  @include verticalAlient();
   width: 100%;
-  position: relative;
-  top: 50%;
-  transform: translateY(-150%);
   display: flex;
   justify-content: center;
   border: 1px solid;
