@@ -8,9 +8,9 @@ import Contract from './components/Contract';
 import Area from './components/Area';
 
 render((<Router history={browserHistory}>
-    <Route path="/" components={App}>
-        <Route path="/perMessage" components={PerMessage}/>
-        <Route path="/area/:title" components={Area}/>
+    <Route path="/perMessage" components={App}>
+        <IndexRoute components={PerMessage}/>
+        <Route path="/:title" components={Area}/>
         <Route path="/contract" components={Contract}/>
     </Route>
 </Router>), document.getElementById('app'));

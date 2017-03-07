@@ -6,6 +6,6 @@ export default class Contract extends React.Component {
     }
 
     render() {
-        return <div>CONTRACT</div>;
+        return <div className="area">CONTRACT</div>;
     }
 }

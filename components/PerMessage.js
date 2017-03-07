@@ -6,6 +6,6 @@ export default class PerMessage extends React.Component {
     }
 
     render() {
-        return <div>PER MESSAGE</div>;
+        return <div className="area">PER MESSAGE</div>;
     }
 }

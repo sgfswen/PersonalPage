@@ -1,0 +1,15 @@
+$navBackground: #00b5ec;
+$navTextColor: #fff;
+$subNavTextColor: #e2e2e2;
+$titleColor: #16364f;
+$subTitleColor: #36a840;
+$navHoverBgColor: #FFF200;
+$navHoverTextColor: #1364a8;
+$littleRadious: 3px;
+$littleTransition: all .2s;
+$navFontSize: 15px;
+@mixin hoverStyle() {
+  background: #fff;
+  color: $navBackground;
+  transition: $littleTransition;
+}

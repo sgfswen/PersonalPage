@@ -1,0 +1,36 @@
+@import "reset";
+@import "variable";
+@import "area";
+
+#app {
+  height: 100%;
+}
+
+.app {
+  height: 100%;
+}
+
+header {
+  padding: 20px;
+  text-align: right;
+  background: $navBackground;
+  z-index: 2;
+  a {
+    display: inline-block;
+    width: 100px;
+    text-decoration: none;
+    text-align: center;
+    padding: 8px;
+    margin: 0 3px;
+    color: $navTextColor;
+    border-radius: $littleRadious;
+    font-size: $navFontSize;
+    letter-spacing: .5px;
+    &:hover {
+      @include hoverStyle();
+    }
+    &.active {
+      @include hoverStyle();
+    }
+  }
+}

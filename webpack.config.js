@@ -23,7 +23,7 @@ module.exports = {
                 loader: 'babel-loader',
                 exclude: '/node_modules/'
             },{
-                test: /\.(sass|css)$/,
+                test: /\.(scss|css)$/,
                 use: ['style-loader', 'css-loader', 'sass-loader'],
                 exclude: '/node_modules/'
             }, {
@@ -37,6 +37,12 @@ module.exports = {
         compress: true,
         historyApiFallback: true,
         publicPath: '/build/'
+    },
+    watch: true,
+    watchOptions: {
+        aggregateTimeout: 300,
+        poll: 1000,
+        ignored: '/node_modules/'
     },
     plugins: [
         new HtmlwebpackPlugin({

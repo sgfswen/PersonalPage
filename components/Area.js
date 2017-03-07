@@ -6,8 +6,8 @@ export default class Area extends React.Component {
     }
 
     render() {
-        const title = this.props.params.title;
-        return <div>
+        const {title} = this.props.params;
+        return <div className="area">
             <h1>{title}</h1>
             <p>..............</p>
         </div>;

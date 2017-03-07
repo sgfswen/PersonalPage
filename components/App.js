@@ -1,23 +1,30 @@
 import React from 'react';
-import {Link} from 'react-router';
 
 import Header from './Header';
 import PerMessage from './PerMessage';
 import Contract from './Contract';
+import NavLink from './NavLink';
+
+import '../style/app.scss';
 
 export default class App extends React.Component {
     constructor() {
         super();
+        this.state = {
+            area: 'perMessage'
+        }
     }
 
     render() {
-        return <div>
-            <Link to="/perMessage">个人简介</Link>
-            <Link to="/area/skill">个人技能</Link>
-            <Link to="/area/workflow">工作流</Link>
-            <Link to="/area/experience">工作经历</Link>
-            <Link to="/area/project">个人项目</Link>
-            <Link to="/contract">联系我</Link>
+        return <div className="app">
+            <header>
+                <NavLink to="/perMessage" onlyActiveOnIndex={true}>个人简介</NavLink>
+                <NavLink to="/skill">个人技能</NavLink>
+                <NavLink to="/workflow">工作流</NavLink>
+                <NavLink to="/experience">工作经历</NavLink>
+                <NavLink to="/project">个人项目</NavLink>
+                <NavLink to="/contract">联系我</NavLink>
+            </header>
             {this.props.children}
         </div>;
     }
