@@ -9,7 +9,7 @@ export default class Area extends React.Component {
         const {title} = this.props.params;
         return <div className="area">
             <h1>{title}</h1>
-            <p>..............</p>
+            <p>.............</p>
         </div>;
     }
 }
